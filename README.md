@@ -168,6 +168,23 @@ simplest_google_trends_forecast_model/
 
 ---
 
+## Diagramas de flujo de trabajo utilizado
+
+A continuación se muestra un esquema visual del flujo completo de tecnologías involucradas en el proyecto, desde la extracción de datos hasta el despliegue del modelo de predicción como una API en la nube:
+
+![Arquitectura del Proyecto](./architecture_diagram.png)
+
+### Descripción del diagrama
+
+- **BigQuery**: Se utiliza para extraer datos históricos de criminalidad en Austin, Texas, usando SQL.
+- **Python**: Ejecuta scripts de extracción, transformación y entrenamiento.
+- **Prophet**: Herramienta de modelado de series de tiempo desarrollada por Meta, usada para generar predicciones.
+- **FastAPI**: Expone una API REST para que usuarios puedan consultar predicciones según el estatus de resolución del crimen.
+- **Docker**: Empaqueta el modelo y la API en una imagen lista para despliegue.
+- **Artifact Registry**: Almacena la imagen Docker en GCP.
+- **Cloud Run**: Despliega la API en un entorno completamente gestionado y escalable, accesible desde internet.
+
+---
 ## 🧠 Autor
 
 Desarrollado por [Carlos Sánchez](https://github.com/The-carlos) como práctica para proyectos de MLOps y despliegue de modelos en producción.
