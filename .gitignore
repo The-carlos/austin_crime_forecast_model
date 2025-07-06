@@ -1,0 +1,11 @@
+# Entorno virtual
+.venv/
+
+# Variables de entorno
+.env
+
+# Credenciales
+*.json
+
+# Datos
+/data/*.csv
